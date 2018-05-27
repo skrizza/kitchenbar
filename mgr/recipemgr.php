@@ -4,11 +4,14 @@
 ##
 ## Display cocktails, 12 at a time. Link lead to edit screen
 ##
+## Code: s k r a t c h
+##
+## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+##
 
-$doc_root = $_SERVER[DOCUMENT_ROOT];
-include("$doc_root/perso/kitchenbar/inc/skratchadmin.php");
-include("$doc_root/perso/kitchenbar/inc/kitchenbar.php");
-include("$doc_root/perso/kitchenbar/inc/clsColumnDisplay.php");
+include(dirname(__FILE__) . "/inc/skratchadmin.php");
+include(dirname(__FILE__) . "/inc/kitchenbar.php");
+include(dirname(__FILE__) . "/inc/clsColumnDisplay.php");
 
 ## Get page variables
 

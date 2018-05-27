@@ -10,13 +10,14 @@
 ##
 ## Code: s k r a t c h
 ##
+## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+##
 
-$doc_root = $_SERVER[DOCUMENT_ROOT];
-include("$doc_root/perso/kitchenbar/inc/skratchadmin.php");
-include("$doc_root/perso/kitchenbar/inc/kitchenbar.php");
-include("$doc_root/perso/kitchenbar/inc/clsHtmlEdit.php");
-include("$doc_root/perso/kitchenbar/inc/clsCocktail.php");
-include("$doc_root/perso/kitchenbar/inc/clsFractions.php");
+include(dirname(__FILE__) . "/inc/skratchadmin.php");
+include(dirname(__FILE__) . "/inc/kitchenbar.php");
+include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/inc/clsCocktail.php");
+include(dirname(__FILE__) . "/inc/clsFractions.php");
 
 # Get page variables
 

@@ -6,14 +6,14 @@
 ##
 ## Code: s k r a t c h
 ##
-## version 2: most logic separated out to new RecipeUpdater class
+##   version 2: most logic separated out to new RecipeUpdater class (skratch)
+## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
 ##
 
-$doc_root = $_SERVER[DOCUMENT_ROOT];
-include("$doc_root/perso/kitchenbar/inc/skratchadmin.php");
-include("$doc_root/perso/kitchenbar/inc/kitchenbar.php");
-include("$doc_root/perso/kitchenbar/inc/clsHtmlEdit.php");
-include("$doc_root/perso/kitchenbar/inc/clsRecipeUpdater.php");
+include(dirname(__FILE__) . "/inc/skratchadmin.php");
+include(dirname(__FILE__) . "/inc/kitchenbar.php");
+include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/inc/clsRecipeUpdater.php");
 
 # Create new instance of class RecipeUpdater with HTML form data
 $updateMgr = new RecipeUpdater($_REQUEST,$_POST);
