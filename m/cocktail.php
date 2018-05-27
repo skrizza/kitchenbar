@@ -14,11 +14,11 @@
 ##
 
 
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
-include(dirname(__FILE__) . "/inc/clsCocktail.php");
-include(dirname(__FILE__) . "/inc/clsFractions.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/../inc/clsCocktail.php");
+include(dirname(__FILE__) . "/../inc/clsFractions.php");
 
 # Get page variables
 

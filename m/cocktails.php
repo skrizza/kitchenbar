@@ -9,10 +9,10 @@
 ## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
 ##
 
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsColumnDisplay.php");
-include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsColumnDisplay.php");
+include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
 
 ## Get page variables
 

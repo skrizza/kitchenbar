@@ -10,14 +10,14 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
 ##
 
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
-include(dirname(__FILE__) . "/inc/clsCocktail.php");
-include(dirname(__FILE__) . "/inc/clsFractions.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/../inc/clsCocktail.php");
+include(dirname(__FILE__) . "/../inc/clsFractions.php");
 
 # Get page variables
 
@@ -44,7 +44,7 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
   <script type="text/javascript"></script>
   <link rel="apple-touch-icon" href="/iphone.png" />
         <link media="only screen and (max-device-width: 480px)"
-              href="/perso/kitchenbar/m/cocktails_handhelds.css"
+              href="cocktails_handhelds.css"
               type= "text/css"
               rel="stylesheet" />
 </head>
@@ -55,8 +55,8 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
 	<div id="page-header">
 		<h1>Recipes. <span class="fade">because you gotta eat</span></h1>
 		<ul id="content-index">
-			<li class="first"><a href="/perso/kitchenbar/m/cocktails">Cocktails</a></li>
-			<li><a href="/perso/kitchenbar/m/recipes">Recipes</a></li>
+			<li class="first"><a href="cocktails">Cocktails</a></li>
+			<li><a href="recipes">Recipes</a></li>
 			<li>Music</li>
 			<li class="last">More</li>
 		</ul>
@@ -94,7 +94,7 @@ print indent_text(4,$recipe->get_utilbar($id,$style,$doubled));
 			<p id="item-blurb"><?php print $recipe->description; ?></p>
 		</div><!-- #aux-recipedef -->
 	</div> <!-- #aux-content -->
-	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="/images/s.gif" /></a></div>
+	<div id="praetorian"><a href="../mgr/recipemgr"><img alt="s" src="../images/s.gif" /></a></div>
 </div> <!-- #page -->
 </body>
 </html>

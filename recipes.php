@@ -6,7 +6,7 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
 ##
 
 

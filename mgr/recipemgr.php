@@ -6,12 +6,12 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
 ##
 
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsColumnDisplay.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsColumnDisplay.php");
 
 ## Get page variables
 
@@ -38,7 +38,7 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
 	<style type="text/css" media="all">
-		@import "/perso/kitchenbar/css/cocktails.css";
+		@import "../css/cocktails.css";
 	</style>
 </head>
 
@@ -49,9 +49,9 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 	<div id="page-header">
 		<h1>U p d a t e s. <span class="fade">makin it all happen</span></h1>
 		<ul id="content-index">
-			<li class="first"><a href="/perso/kitchenbar/mgr/recipemgr">Recipe Manager</a></li>
-			<li><a href="/perso/kitchenbar/cocktails">Cocktails</a></li>
-			<li><a href="/perso/kitchenbar/recipes">Recipes</a></li>
+			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
+			<li><a href="../cocktails">Cocktails</a></li>
+			<li><a href="../recipes">Recipes</a></li>
 			<li>Music</li>
 			<li>Literature</li>
 			<li class="last">Film</li>

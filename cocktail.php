@@ -10,7 +10,7 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
 ##
 
 
@@ -42,7 +42,7 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
 	<title>Cocktails: <?php print $recipe->name; ?></title>
 	<script type="text/javascript"></script>
 	<style type="text/css" media="all">
-		@import "/perso/kitchenbar/css/cocktails.css";
+		@import "css/cocktails.css";
 	</style>
 </head>
 
@@ -52,8 +52,8 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
 	<div id="page-header">
 		<h1>C o c k t a i l s. <span class="fade">the life of the party</span></h1>
 		<ul id="content-index">
-			<li class="first"><a href="/perso/kitchenbar/cocktails">Cocktails</a></li>
-			<li><a href="/perso/kitchenbar/recipes">Recipes</a></li>
+			<li class="first"><a href="cocktails">Cocktails</a></li>
+			<li><a href="recipes">Recipes</a></li>
 			<li>Music</li>
 			<li>Literature</li>
 			<li class="last">Film</li>
@@ -92,7 +92,7 @@ print indent_text(4,$recipe->get_utilbar($id,$style,$doubled));
 			<p id="item-blurb"><?php print $recipe->description; ?></p>
 		</div><!-- #aux-recipedef -->
 	</div> <!-- #aux-content -->
-	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="/images/s.gif" /></a></div>
+	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></div>
 </div> <!-- #page -->
 </body>
 </html>

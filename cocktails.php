@@ -6,7 +6,7 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
 ##
 
 include(dirname(__FILE__) . "/inc/skratchadmin.php");
@@ -45,8 +45,8 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
 	<link rel="apple-touch-icon" href="/iphone.png" />
-        <link media="only screen and (max-device-width: 480px)" href="/perso/kitchenbar/css/cocktails_handhelds.css" type= "text/css" rel="stylesheet" />
-        <link media="screen" href="/perso/kitchenbar/css/cocktails.css" type= "text/css" rel="stylesheet" />
+        <link media="only screen and (max-device-width: 480px)" href="css/cocktails_handhelds.css" type= "text/css" rel="stylesheet" />
+        <link media="screen" href="css/cocktails.css" type= "text/css" rel="stylesheet" />
 </head>
 
 <body id="cocktails">
@@ -55,8 +55,8 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 	<div id="page-header">
 		<h1>C o c k t a i l s. <span class="fade">the life of the party</span></h1>
 		<ul id="content-index">
-			<li class="first"><a href="/perso/kitchenbar/cocktails">Cocktails</a></li>
-			<li><a href="/perso/kitchenbar/recipes">Recipes</a></li>
+			<li class="first"><a href="cocktails">Cocktails</a></li>
+			<li><a href="recipes">Recipes</a></li>
 			<li>Music</li>
 			<li>Literature</li>
 			<li class="last">Film</li>
@@ -94,7 +94,7 @@ print "\t\t\t\t" . $prevnav . " / " . $nextnav;
 		</div> <!-- #detail-list -->
 		
 	</div> <!-- #main-content -->
-	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="/images/s.gif" /></a></div>
+	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></div>
 </div> <!-- #page -->
 </body> <!-- #cocktails -->
 </html>
