@@ -1,0 +1,4 @@
+PerlSetVar AuthFile __pathToAuthFile__
+AuthName "s k r a t c h recipe manager."
+AuthType Basic
+require valid-user

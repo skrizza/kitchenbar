@@ -1,0 +1,133 @@
+/*
+ * cocktails_handhelds.css
+ * CSS style for cocktails pages, overrides for handhelds
+ * color scheme 2
+ * background: green #00ff00
+ * box color: BLUE #66ffff
+ * secondary: pink #ff33cc
+ *
+ */
+body {
+  margin:0px;
+  padding:0px;
+  font-family:verdana, arial, helvetica, sans-serif;
+  background-color: #00ff00;
+  color: #000000;
+  font-size: 30px;
+}
+#page-header {
+  margin:0px 0px 10px 0px;
+  padding:5px 0px 0px 10px;
+  /* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+  /*height:93px; *//* 54px + 17px + 2px = 93px */
+  border-style:solid;
+  border-color:black;
+  border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+  /*line-height:11px;*/
+  background-color:#ff33cc;
+  /* IE Hack */
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  height:74px; /* the correct height */
+}
+h1,h2 { display: inline }
+h1 { margin: 0 0 0 0; padding: 0 0 0 0; font-size: 35px; }
+.fade { font-size: 8px; }
+h1 .fade { color: #66ffff; }
+h2 { 
+  font-size: 25px; 
+  color: #ff33cc; 
+  background-color: #00ff00;
+  padding: 0px 0px 0px 10px;
+}
+
+h2 .fade { display: none }
+h3 { font-size: 20px; color:grey; }
+
+#content-index {
+  margin: 0 0 0 0;
+  padding: 0px 0px 0px 0px;
+  font-size: 13px;
+}
+ul#content-index {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 5px 0 0 0;
+}
+ul#content-index li {
+  display: inline;
+  margin: 0 0 0 0;
+  padding: 0px 10px 0px 10px;
+  border-style: none solid none none;
+  border-width: 0 1px 0 0;
+}
+ul#content-index li.last { border-style: none none none none; }
+
+#cocktail-list, #recipe-list, #ingredients {
+  margin: 10px 20px 30px 20px;
+  padding: 0 0 0 0;
+  background-color: #ffffff;
+  border: solid 1px #ff33cc;
+}
+
+#cocktail-list a, #cocktail-list a:link, #cocktail-list a:hover, #cocktail-list a:visited,
+#recipe-list a,   #recipe-list a:link,   #recipe-list a:hover,   #recipe-list a:visited    {
+  text-decoration: none;
+  color: #333300;
+}
+
+#listing {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  font-size:16px;
+  border: 0 0 0 0;
+}
+#ingrbody {
+    font-size: 12px;
+}
+#cocktail-list h3, #recipe-list h3, #ingredients h3,
+#listing #page-nav, #ingrbody #utilbar {
+  background-color: #00ffff;
+}
+
+#cocktail-list h3, #recipe-list h3, #ingredients h3 {
+  margin: 0 0 0 0;
+  padding: 10px 10px 10px 10px;
+  border-bottom: solid 1px #ff33cc; 
+}
+
+#listing #page-nav, #ingrbody #utilbar {
+  margin: 30px 0px 0px 0px;
+  padding: 15px 20px 15px 0px;
+  border-top: solid 1px #ff33cc;
+  text-align: right;
+  color: #d0d0d0;
+}
+
+#listing ul {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  list-style: none;
+}
+
+#list1 li, #list2 li {
+  margin: 0px 30px 0px 30px;
+  padding: 10px 0px 10px 10px;  
+  border-style: none none solid none;
+  border-bottom-width: 1px;
+  border-bottom-color: #ff33cc;
+}
+
+#praetorian { 
+    /* Changed for Handheld: don't display praetorian at all */
+    display: none;
+}
+#praetorian a { 
+    /* Changed for Handheld: don't display praetorian at all */
+    display: none;
+}
+#praetorian a img { 
+    /* Changed for Handheld: don't display praetorian at all */
+    display: none;
+}
