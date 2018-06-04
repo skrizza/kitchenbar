@@ -51,7 +51,7 @@ if ($updateMgr->up == "submittal") {
 	<title>Recipe Updater</title>
 	<script type="text/javascript"></script>
 	<link rel="apple-touch-icon" href="/iphone.png" />
-	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
+	<link rel="stylesheet" href="../css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="cocktails">
@@ -63,11 +63,7 @@ if ($updateMgr->up == "submittal") {
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
 			<li><a href="../cocktails">Cocktails</a></li>
 			<li><a href="../recipes">Recipes</a></li>
-			<li>Music</li>
-			<li>Literature</li>
-			<li class="last">Film</li>
-			<li class="last"><!-- <?php print "us: [" . $updateMgr->us . "], up: [" . $updateMgr->up . "], ut: [" . $updateMgr->ut . "], rid: [" . $updateMgr->rid . "]";
- ?>--></li>
+			<li class="last">More</li>
 		</ul>
 	</header> <!-- #page-header -->
 

@@ -10,10 +10,10 @@
 ## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
-include(dirname(__FILE__) . "/../inc/skratchadmin.php");
-include(dirname(__FILE__) . "/../inc/kitchenbar.php");
-include(dirname(__FILE__) . "/../inc/clsColumnDisplay.php");
-include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/inc/skratchadmin.php");
+include(dirname(__FILE__) . "/inc/kitchenbar.php");
+include(dirname(__FILE__) . "/inc/clsColumnDisplay.php");
+include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
 
 ## Get page variables
 

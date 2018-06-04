@@ -40,7 +40,7 @@ $recipe = new Cocktail($id);
 	<title>Cocktail Viewer: <?php print $name; ?></title>
 	<script type="text/javascript"></script>
 	<link rel="apple-touch-icon" href="/iphone.png" />
-	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
+	<link rel="stylesheet" href="../css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="cocktails">
@@ -52,9 +52,7 @@ $recipe = new Cocktail($id);
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
 			<li><a href="../cocktails">Cocktails</a></li>
 			<li><a href="../recipes">Recipes</a></li>
-			<li>Music</li>
-			<li>Literature</li>
-			<li class="last">Film</li>
+			<li class="last">More</li>
 		</ul>
 	</header> <!-- #page-header -->
 

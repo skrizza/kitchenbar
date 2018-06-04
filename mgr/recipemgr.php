@@ -40,7 +40,7 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
 	<link rel="apple-touch-icon" href="/iphone.png" />
-	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
+	<link rel="stylesheet" href="../css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="cocktails">
@@ -53,9 +53,7 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
 			<li><a href="../cocktails">Cocktails</a></li>
 			<li><a href="../recipes">Recipes</a></li>
-			<li>Music</li>
-			<li>Literature</li>
-			<li class="last">Film</li>
+			<li class="last">More</li>
 		</ul>
 	</header> <!-- #page-header -->
 
@@ -63,9 +61,9 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 		<h2>at your service. <span class="fade">(recipe editor)</span></h2>
 
 		<section id="maintenance-list">
-			<h3><span>the cocktail list.</span></h3>
+			<h3><span>maintenance.</span></h3>
 			<article id="listing">
-				<p><a href="update-recipe">Create a new recipe</a></p>
+				<p><a href="update-recipe">Create a new recipe.</a></p>
 				<p>Or Choose a recipe to edit:</p>
 <?php
 ## Show first column data

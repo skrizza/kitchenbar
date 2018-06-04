@@ -77,7 +77,7 @@
 	}
 	ul#content-index li.last { border-style: none none none none; }
 
-	#cocktail-list, #recipe-list, #ingredients, #preparation, #aux-content {
+	#cocktail-list, #maintenance-list, #recipe-list, #ingredients, #preparation, #aux-content, #workspace, #blurb {
 	  margin: 10px 20px 30px 20px;
 	  padding: 0 0 0 0;
 	  background-color: #ffffff;
@@ -85,7 +85,7 @@
 	}
 
 	#cocktail-list a, #cocktail-list a:link, #cocktail-list a:hover, #cocktail-list a:visited,
-	#recipe-list a,   #recipe-list a:link,   #recipe-list a:hover,   #recipe-list a:visited     {
+	#recipe-list a,   #recipe-list a:link,   #recipe-list a:hover,   #recipe-list a:visited, #maintenance-list a, #maintenance-list a:link, #maintenance-list a:hover, #maintenance-list a:visited, #workspace a, #workspace a:link, #workspace a:hover, #workspace a:visited     {
 	  text-decoration: none;
 	  color: #333300;
 	}
@@ -97,15 +97,14 @@
 	  font-size:16px;
 	  border: 0 0 0 0;
 	}
-	#ingrbody, #preparation, #aux-content {
+	#ingrbody, #preparation, #aux-content, #mainform, #blurb {
 		font-size: 12px;
 	}
-	#cocktail-list h3, #recipe-list h3, #ingredients h3, #preparation h3, #aux-content h3,
-	#listing #page-nav, #ingrbody #utilbar {
+	#cocktail-list h3, #recipe-list h3, #ingredients h3, #preparation h3, #aux-content h3, #maintenance-list h3, #workspace h3,	#listing #page-nav, #ingrbody #utilbar, #blurb h3 {
 	  background-color: #00ffff;
 	}
 
-	#cocktail-list h3, #recipe-list h3, #ingredients h3, #preparation h3, #aux-content h3 {
+	#cocktail-list h3, #recipe-list h3, #ingredients h3, #preparation h3, #aux-content h3, #maintenance-list h3, #workspace h3, #blurb h3 {
 	  margin: 0 0 0 0;
 	  padding: 10px 10px 10px 10px;
 	  border-bottom: solid 1px #ff33cc; 
@@ -117,6 +116,10 @@
 	  border-top: solid 1px #ff33cc;
 	  text-align: right;
 	  color: #d0d0d0;
+	}
+	
+	#listing p {
+		margin-left: 20px;
 	}
 
 	#listing ul {
@@ -166,7 +169,7 @@
 		padding: 20px 0px 0px 0px;
 	}
 
-	#prepbody > p, #aux-content p {
+	#prepbody > p, #aux-content p, #blurb p {
 		margin: 0 0 0 0;
 		padding: 20px 20px 20px 20px;
 	}
@@ -182,6 +185,70 @@
 	#praetorian a img { 
 		/* Changed for Handheld: don't display praetorian at all */
 		display: none;
+	}
+	
+	form, fieldset {
+		border-style: none
+	}
+
+	/* Form Elements */
+
+	.textbox { background-color: #ffffcc; color: #000000; }
+	
+	input.textbox:focus, textarea:focus, select.textbox:focus {
+		background-color: #ffcccc; 
+		color: #000000; 
+	} 			
+
+	select.textbox  { background-color: #ffffcc; color: #000000; }	
+	
+	input.textbox, textarea.textbox {
+		margin: 10px 20px 10px 20px;
+	}
+
+	#aux-content table { 
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	#aux-content h1 { 
+		font-size: 12px; 
+		font-style: italic; 
+		font-weight: bold; 
+	}	
+	
+	#aux-content td { font-size:10px; }
+	#aux-content td.head { text-align: right; }
+	#aux-content td.data { font-style: italic; } 
+	#aux-content p.msg { font-style: italic; }
+	#aux-content h1 { 
+		font-size: 12px; 
+		font-style: italic; 
+		font-weight: bold; 
+		margin-left: 20px;
+	}
+	#aux-content li { 
+		margin-right: 20px;
+	}
+	
+	#aux-content form { text-align: right; } 
+	#aux-content .current { color: red; }
+	#aux-content .current td.data { color: red; }	
+	
+	#item-title p {
+		font-size: 12px;
+		color: #ff33cc;
+		background-color: #00ff00;
+		padding-left: 10px;
+	}
+	 
+	#mainform p, #mainform li {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	#mainform table {
+		margin: 10px 10px 10px 10px;
 	}
 }
 
