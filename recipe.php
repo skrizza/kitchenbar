@@ -11,13 +11,14 @@
 ## Code: s k r a t c h
 ##
 ## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
+## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
-include(dirname(__FILE__) . "/inc/clsCocktail.php");
-include(dirname(__FILE__) . "/inc/clsFractions.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/../inc/clsCocktail.php");
+include(dirname(__FILE__) . "/../inc/clsFractions.php");
 
 # Get page variables
 
@@ -38,32 +39,31 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-	<title>Recipes: <?php print $recipe->name; ?></title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />		
+	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
-	<style type="text/css" media="all">
-		@import "css/cocktails.css";
-	</style>
+	<link rel="apple-touch-icon" href="/iphone.png" />
+	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="recipes">
 
 <div id="page">
-	<div id="page-header">
-		<h1>R e c i p e s. <span class="fade">because you gotta eat</span></h1>
+	<header id="page-header">
+		<h1>Recipes. <span class="fade">because you gotta eat</span></h1>
 		<ul id="content-index">
 			<li class="first"><a href="cocktails">Cocktails</a></li>
 			<li><a href="recipes">Recipes</a></li>
 			<li>Music</li>
-			<li>Literature</li>
-			<li class="last">Film</li>
+			<li class="last">More</li>
 		</ul>
-	</div> <!-- #page-header -->
+	</header> <!-- #page-header -->
 
 	<div id="main-content">
 		<h2><?php print $recipe->name; ?></h2>
-		<div id="ingredients">
-			<h3><span>Ingredients</span></h3>
-			<div id="ingrbody">
+		<section id="ingredients">
+			<h3><span>ingredients.</span></h3>
+			<article id="ingrbody">
 <?php 
 if ($style == "ratio"):
 	print indent_text(4,$recipe->get_ingr_ratio());
@@ -73,25 +73,25 @@ endif;
 
 print indent_text(4,$recipe->get_utilbar($id,$style,$doubled));
 ?>
-			</div><!-- #ingrbody -->
-		</div> <!-- #ingredients -->
+			</article><!-- #ingrbody -->
+		</section> <!-- #ingredients -->
 
-		<div id="preparation">
-			<h3><span>Preparation</span></h3>
-			<div id="prepbody">
+		<section id="preparation">
+			<h3><span>preparation.</span></h3>
+			<article id="prepbody">
 <?php print indent_text(4,$recipe->preparation); ?>
-			</div><!-- #prepbody -->
-		</div> <!-- #preparation -->
+			</article><!-- #prepbody -->
+		</article> <!-- #preparation -->
 
 	</div> <!-- #main-content -->
 
-	<div id="aux-content">
+	<aside id="aux-content">
 		<h3><span>about the recipe.</span></h3>
-		<div id="aux-recipedef">
+		<article id="aux-recipedef">
 			<p id="item-blurb"><?php print $recipe->description; ?></p>
-		</div><!-- #aux-recipedef -->
-	</div> <!-- #aux-content -->
-	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></div>
+		</article><!-- #aux-recipedef -->
+	</aside> <!-- #aux-content -->
+	<aside id="praetorian"><a href="../mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></aside>
 </div> <!-- #page -->
 </body>
 </html>

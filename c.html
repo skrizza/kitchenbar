@@ -1,39 +1,3 @@
-<?php
-##
-## cocktail.php
-##
-## display cocktail detail.
-## Page variables:
-##  $style (metric/usa/ratio) default: usa
-##  $double (true/false) default: false
-##  $id (integer) default: 1
-##
-## Code: s k r a t c h
-##
-## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
-## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
-##
-
-include(dirname(__FILE__) . "/../inc/skratchadmin.php");
-include(dirname(__FILE__) . "/../inc/kitchenbar.php");
-include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
-include(dirname(__FILE__) . "/../inc/clsCocktail.php");
-include(dirname(__FILE__) . "/../inc/clsFractions.php");
-
-# Get page variables
-
-$id = $_REQUEST[id];
-$style = $_REQUEST[style];
-$doubled = $_REQUEST[doubled];
-
-# Set default values if data is missing
-if ($id == "") $id = 1;
-if ($style != "metric" && $style != "usa" && $style != "ratio") $style = "usa";
-if ($doubled != "true" && $doubled != "false") $doubled = "false";
-
-$recipe = new Cocktail($id);
-if ($doubled == "true") $recipe->apply_ingr_mult("2");
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -60,26 +24,31 @@ if ($doubled == "true") $recipe->apply_ingr_mult("2");
 	</header> <!-- #page-header -->
 
 	<div id="main-content">
-		<h2><?php print $recipe->name; ?></h2>
+		<h2>Hurricane</h2>
 		<section id="ingredients">
 			<h3><span>ingredients</span></h3>
 			<article id="ingrbody">
-<?php 
-if ($style == "ratio"):
-	print indent_text(4,$recipe->get_ingr_ratio());
-else:
-	print indent_text(4,$recipe->gen_ingredients()); 
-endif;
-
-print indent_text(4,$recipe->get_utilbar($id,$style,$doubled));
-?>
+	<ul>
+	<li>2 ounce light rum</li>
+	<li>2 ounce dark rum</li>
+	<li>2 ounce passion fruit juice</li>
+	<li>1 ounce orange juice</li>
+	<li> 1/2 ounce lime juice</li>
+	<li>1 tablespoon simple syrup</li>
+	<li>1 tablespoon grenadine</li>
+	</ul>
+	<p id="utilbar">
+	<a href="cocktail?id=16&amp;doubled=true&amp;style=usa">double!</a> /  metric / <a href="cocktail?id=16&amp;style=ratio">ratio</a>
+	</p>
 			</article><!-- #ingrbody -->
 		</section> <!-- #ingredients -->
 
 		<section id="preparation">
 			<h3><span>preparation.</span></h3>
 			<article id="prepbody">
-<?php print indent_text(4,$recipe->preparation); ?>
+	<p>
+Shake all the ingredients in a cocktail shaker with ice and strain into a hurricane glass. Garnish with a cherry and an orange slice.
+	</p>
 			</article><!-- #prepbody -->
 		</section> <!-- #preparation -->
 
@@ -88,7 +57,7 @@ print indent_text(4,$recipe->get_utilbar($id,$style,$doubled));
 	<aside id="aux-content">
 		<h3><span>about the recipe.</span></h3>
 		<article id="aux-recipedef">
-			<p id="item-blurb"><?php print $recipe->description; ?></p>
+			<p id="item-blurb">The creation of this passion-colored relative of a Daiquiri drink is credited to Pat O'Brien. He is reported to have invented the Hurricane in the 1940s in New Orleans. Rumors say he needed to get rid of all the rum that Southern distributors forced him to buy before he could get a few cases of other spirits. He poured the concoction into hurricane-lamp-shaped glasses and gave it away to sailors. The drink caught on, and it's been part of the celebration ever since....</p>
 		</article><!-- #aux-recipedef -->
 	</aside> <!-- #aux-content -->
 	<aside id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></aside>

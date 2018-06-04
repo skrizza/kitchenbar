@@ -11,6 +11,7 @@
 ## Code: s k r a t c h
 ##
 ## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
+## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
 include(dirname(__FILE__) . "/../inc/skratchadmin.php");
@@ -38,15 +39,14 @@ $recipe = new Cocktail($id);
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
 	<title>Cocktail Viewer: <?php print $name; ?></title>
 	<script type="text/javascript"></script>
-	<style type="text/css" media="all">
-		@import "../css/cocktails.css";
-	</style>
+	<link rel="apple-touch-icon" href="/iphone.png" />
+	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="cocktails">
 
 <div id="page">
-	<div id="page-header">
+	<header id="page-header">
 		<h1>U p d a t e s. <span class="fade">makin it all happen</span></h1>
 		<ul id="content-index">
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
@@ -56,7 +56,7 @@ $recipe = new Cocktail($id);
 			<li>Literature</li>
 			<li class="last">Film</li>
 		</ul>
-	</div> <!-- #page-header -->
+	</header> <!-- #page-header -->
 
 	<div id="main-content">
 

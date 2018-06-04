@@ -7,6 +7,7 @@
 ## Code: s k r a t c h
 ##
 ## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
+## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
 include(dirname(__FILE__) . "/../inc/skratchadmin.php");
@@ -35,18 +36,18 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
-	<style type="text/css" media="all">
-		@import "../css/cocktails.css";
-	</style>
+	<link rel="apple-touch-icon" href="/iphone.png" />
+	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="cocktails">
 
 <div id="page">
 
-	<div id="page-header">
+	<header id="page-header">
 		<h1>U p d a t e s. <span class="fade">makin it all happen</span></h1>
 		<ul id="content-index">
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
@@ -56,16 +57,14 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 			<li>Literature</li>
 			<li class="last">Film</li>
 		</ul>
-	</div> <!-- #page-header -->
+	</header> <!-- #page-header -->
 
 	<div id="main-content">
-		<div id="page-intro">
-			<h2>at your service. <span class="fade">(recipe editor)</span></h2>
-		</div> <!-- page-intro -->
+		<h2>at your service. <span class="fade">(recipe editor)</span></h2>
 
-		<div id="maintenance-list">
+		<section id="maintenance-list">
 			<h3><span>the cocktail list.</span></h3>
-			<div id="listing">
+			<article id="listing">
 				<p><a href="update-recipe">Create a new recipe</a></p>
 				<p>Or Choose a recipe to edit:</p>
 <?php
@@ -85,11 +84,11 @@ $nextnav = $display->get_nextnav();
 print $prevnav . " / " . $nextnav;
 ?>
 				</p><!-- #page-nav -->
-			</div><!-- #listing -->
-		</div> <!-- detail-list -->
+			</article><!-- #listing -->
+		</section> <!-- detail-list -->
 	</div> <!-- id=main-content -->
 
 
-</div> <!-- id=page -->
+</div> <!-- id=#page -->
 </body> <!-- cocktails -->
 </html>

@@ -6,14 +6,14 @@
 ##
 ## Code: s k r a t c h
 ##
-## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
+## 26-MAY-2018: [#1] Fixed includes to use relative paths (skratch)
+## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
-
-include(dirname(__FILE__) . "/inc/skratchadmin.php");
-include(dirname(__FILE__) . "/inc/kitchenbar.php");
-include(dirname(__FILE__) . "/inc/clsColumnDisplay.php");
-include(dirname(__FILE__) . "/inc/clsHtmlEdit.php");
+include(dirname(__FILE__) . "/../inc/skratchadmin.php");
+include(dirname(__FILE__) . "/../inc/kitchenbar.php");
+include(dirname(__FILE__) . "/../inc/clsColumnDisplay.php");
+include(dirname(__FILE__) . "/../inc/clsHtmlEdit.php");
 
 ## Get page variables
 
@@ -37,35 +37,32 @@ $display = new ColumnDisplay(${iid},${DISPLAY_COLUMN_NUM},${STYLE},${TYPE});
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-	<title>Recipes.</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />		
+	<title>Cocktails.</title>
 	<script type="text/javascript"></script>
-	<style type="text/css" media="all">
-		@import "/perso/kitchenbar/css/cocktails.css";
-	</style>
+	<link rel="apple-touch-icon" href="/iphone.png" />
+	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
 </head>
 
 <body id="recipes">
 
 <div id="page">
-	<div id="page-header">
-		<h1>R e c i p e s . <span class="fade">because you gotta eat</span></h1>
+	<header id="page-header">
+		<h1>Recipes. <span class="fade">because you gotta eat</span></h1>
 		<ul id="content-index">
-			<li class="first"><a href="/perso/kitchenbar/cocktails">Cocktails</a></li>
-			<li><a href="/perso/kitchenbar/recipes">Recipes</a></li>
+			<li class="first"><a href="cocktails">Cocktails</a></li>
+			<li><a href="recipes">Recipes</a></li>
 			<li>Music</li>
-			<li>Literature</li>
-			<li class="last">Film</li>
+			<li class="last">More</li>
 		</ul>
-	</div> <!-- #page-header -->
+	</header> <!-- #page-header -->
 
 	<div id="main-content">
-		<div id="page-intro">
-			<h2>hungry ? <span class="fade">(recipes by name)</span></h2>
-		</div> <!-- #page-intro -->
+		<h2>hungry ? <span class="fade">(recipes by name)</span></h2>
 
-		<div id="recipe-list">
+		<section id="recipe-list">
 			<h3><span>the recipe list.</span></h3>
-			<div id="listing">
+			<article id="listing">
 <?php
 ## Show first column data
 $col1 = $display->get_col1();
@@ -85,11 +82,11 @@ $nextnav = $display->get_nextnav();
 print "\t\t\t\t" . $prevnav . " / " . $nextnav;
 ?>
 				</p>
-			</div><!-- #listing -->
-		</div> <!-- #detail-list -->
+			</article><!-- #listing -->
+		</section> <!-- #detail-list -->
 		
 	</div> <!-- #main-content -->
-	<div id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="/images/s.gif" /></a></div>
-</div> <!-- #page -->
+	<aside id="praetorian"><a href="mgr/recipemgr"><img alt="s" src="images/s.gif" /></a></aside>
+</a> <!-- #page -->
 </body> <!-- #cocktails -->
 </html>

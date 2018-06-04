@@ -8,6 +8,7 @@
 ##
 ##   version 2: most logic separated out to new RecipeUpdater class (skratch)
 ## 26-MAY-2018: [#1] Fixed includes and all paths to use relative paths (skratch)
+## 04-JUN-2018: Merged mobile and desktop versions to a more  responsive design (skratch)
 ##
 
 include(dirname(__FILE__) . "/../inc/skratchadmin.php");
@@ -46,15 +47,17 @@ if ($updateMgr->up == "submittal") {
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-	<title>Cocktails.</title>
-	<style type="text/css" media="all">
-		@import "../css/cocktails.css";
-	</style>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	<title>Recipe Updater</title>
+	<script type="text/javascript"></script>
+	<link rel="apple-touch-icon" href="/iphone.png" />
+	<link rel="stylesheet" href="css/kitchenbar.css" type="text/css" />
 </head>
+
 <body id="cocktails">
 
 <div id="page">
-	<div id="page-header">
+	<header id="page-header">
 		<h1>U p d a t e s. <span class="fade">makin it all happen</span></h1>
 		<ul id="content-index">
 			<li class="first"><a href="recipemgr">Recipe Manager</a></li>
@@ -66,7 +69,7 @@ if ($updateMgr->up == "submittal") {
 			<li class="last"><!-- <?php print "us: [" . $updateMgr->us . "], up: [" . $updateMgr->up . "], ut: [" . $updateMgr->ut . "], rid: [" . $updateMgr->rid . "]";
  ?>--></li>
 		</ul>
-	</div> <!-- #page-header -->
+	</header> <!-- #page-header -->
 
 	<div id="main-content">
 		<form action="update-recipe" method="post">
